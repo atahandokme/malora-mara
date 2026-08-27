@@ -1,0 +1,45 @@
+{
+  "method": "diagonal_gated_linear_hproj_scalar",
+  "model": "meta-llama/Llama-3.1-8B",
+  "dataset": "musique",
+  "rank": 16,
+  "gate_type": "linear",
+  "mode": "hproj",
+  "output_type": "scalar",
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 29294752,
+  "total_params": 8059556000,
+  "trainable_pct": 0.3635,
+  "total_training_time_s": 55518.3,
+  "avg_time_per_step_s": 5.78,
+  "peak_gpu_memory_mb": 34688.0,
+  "best_val_loss": 0.06931889028281693,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.19057442347607637,
+      "val_loss": 0.08270063526779996,
+      "train_time_s": 27425.2,
+      "val_time_s": 300.8,
+      "time_per_step_s": 5.774,
+      "num_train_steps": 4750,
+      "peak_gpu_memory_mb": 33817.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.017323357920876352,
+      "val_loss": 0.06931889028281693,
+      "train_time_s": 27486.4,
+      "val_time_s": 301.7,
+      "time_per_step_s": 5.787,
+      "num_train_steps": 4750,
+      "peak_gpu_memory_mb": 34688.0
+    }
+  ]
+}

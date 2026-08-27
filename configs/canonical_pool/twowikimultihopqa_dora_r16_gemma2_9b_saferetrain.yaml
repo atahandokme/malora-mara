@@ -1,0 +1,40 @@
+dataset:
+  name: twowikimultihopqa
+evaluation:
+  do_sample: false
+  max_new_tokens: 32
+  num_beams: 4
+  temperature: 0.0
+hardware:
+  device: cuda
+  mixed_precision: true
+logging:
+  log_every_n_steps: 50
+  save_every_n_epochs: 1
+lora:
+  alpha: 32
+  dropout: 0.05
+  rank: 16
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - up_proj
+  - down_proj
+  use_dora: true
+lora_pool_path: data/preprocessed_10k/twowikimultihopqa_canonical_n10000.json
+model:
+  base_model: google/gemma-2-9b
+  torch_dtype: bfloat16
+output_root: outputs/canonical_pool_2026_05_09
+run_tag: lora_saferetrain
+training:
+  batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0001
+  max_grad_norm: 0.5
+  max_seq_length: 4096
+  max_train_samples: 10000
+  num_epochs: 2
+  warmup_steps: 300
+  weight_decay: 0.0

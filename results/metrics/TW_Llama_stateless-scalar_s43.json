@@ -1,0 +1,45 @@
+{
+  "method": "diagonal_gated_linear_hproj_scalar",
+  "model": "meta-llama/Llama-3.1-8B",
+  "dataset": "twowikimultihopqa",
+  "rank": 16,
+  "gate_type": "linear",
+  "mode": "hproj",
+  "output_type": "scalar",
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 29294752,
+  "total_params": 8059556000,
+  "trainable_pct": 0.3635,
+  "total_training_time_s": 20117.0,
+  "avg_time_per_step_s": 4.18,
+  "peak_gpu_memory_mb": 35586.0,
+  "best_val_loss": 0.02072545427022851,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.08995478820509206,
+      "val_loss": 0.02095324969472131,
+      "train_time_s": 9914.9,
+      "val_time_s": 129.7,
+      "time_per_step_s": 4.175,
+      "num_train_steps": 2375,
+      "peak_gpu_memory_mb": 34317.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.016452334942838015,
+      "val_loss": 0.02072545427022851,
+      "train_time_s": 9939.9,
+      "val_time_s": 129.5,
+      "time_per_step_s": 4.185,
+      "num_train_steps": 2375,
+      "peak_gpu_memory_mb": 35586.0
+    }
+  ]
+}

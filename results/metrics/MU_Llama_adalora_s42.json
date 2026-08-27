@@ -1,0 +1,42 @@
+{
+  "method": "adalora",
+  "model": "meta-llama/Llama-3.1-8B",
+  "dataset": "musique",
+  "rank": 16,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 42471168,
+  "total_params": 8072732576,
+  "trainable_pct": 0.5261,
+  "total_training_time_s": 61453.8,
+  "avg_time_per_step_s": 6.397,
+  "peak_gpu_memory_mb": 33922.0,
+  "best_val_loss": 0.08280980153754354,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.45275694914868003,
+      "val_loss": 0.12450068217515946,
+      "train_time_s": 30409.3,
+      "val_time_s": 337.1,
+      "time_per_step_s": 6.402,
+      "num_train_steps": 4750,
+      "peak_gpu_memory_mb": 32885.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.05883308987689548,
+      "val_loss": 0.08280980153754354,
+      "train_time_s": 30366.2,
+      "val_time_s": 338.7,
+      "time_per_step_s": 6.393,
+      "num_train_steps": 4750,
+      "peak_gpu_memory_mb": 33922.0
+    }
+  ]
+}

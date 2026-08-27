@@ -1,0 +1,45 @@
+{
+  "method": "diagonal_gated_mamba_hproj_diag",
+  "model": "google/gemma-2-9b",
+  "dataset": "musique",
+  "rank": 16,
+  "gate_type": "mamba",
+  "mode": "hproj",
+  "output_type": "diag",
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 56791392,
+  "total_params": 9298497376,
+  "trainable_pct": 0.6108,
+  "total_training_time_s": 60520.2,
+  "avg_time_per_step_s": 3.135,
+  "peak_gpu_memory_mb": 40628.0,
+  "best_val_loss": 0.05978053123218514,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.24763464967980142,
+      "val_loss": 0.06333548574362012,
+      "train_time_s": 29695.1,
+      "val_time_s": 474.9,
+      "time_per_step_s": 3.126,
+      "num_train_steps": 9499,
+      "peak_gpu_memory_mb": 38133.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.03811526101190045,
+      "val_loss": 0.05978053123218514,
+      "train_time_s": 29858.8,
+      "val_time_s": 483.6,
+      "time_per_step_s": 3.143,
+      "num_train_steps": 9499,
+      "peak_gpu_memory_mb": 40628.0
+    }
+  ]
+}

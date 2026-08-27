@@ -1,0 +1,42 @@
+{
+  "method": "lora",
+  "model": "Qwen/Qwen2.5-7B",
+  "dataset": "twowikimultihopqa",
+  "rank": 16,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 27066368,
+  "total_params": 7642682880,
+  "trainable_pct": 0.3541,
+  "total_training_time_s": 21416.4,
+  "avg_time_per_step_s": 4.447,
+  "peak_gpu_memory_mb": 35933.0,
+  "best_val_loss": 0.037629428631393236,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.09633158886300225,
+      "val_loss": 0.037629428631393236,
+      "train_time_s": 10594.1,
+      "val_time_s": 146.0,
+      "time_per_step_s": 4.461,
+      "num_train_steps": 2375,
+      "peak_gpu_memory_mb": 34816.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.024136776049998986,
+      "val_loss": 0.044302438582646576,
+      "train_time_s": 10529.3,
+      "val_time_s": 146.0,
+      "time_per_step_s": 4.433,
+      "num_train_steps": 2375,
+      "peak_gpu_memory_mb": 35933.0
+    }
+  ]
+}

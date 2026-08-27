@@ -1,0 +1,24 @@
+# Versions used to produce the results in the paper.
+# Python 3.10.19
+
+torch==2.5.1
+transformers==4.54.1
+datasets==4.5.0
+peft==0.13.2
+mambapy==1.2.0
+numpy==1.26.4
+scipy==1.15.3
+accelerate==0.34.2
+sentencepiece==0.2.1
+tqdm==4.67.3
+PyYAML==6.0.3
+rank_bm25==0.2.2
+
+# Notes
+# - torch is pinned without a CUDA suffix; install the build matching your
+#   driver (results were produced with 2.5.1+cu121).
+# - mambapy provides the pure-PyTorch Mamba-1 (S6) recurrence used by both
+#   MaLoRA and MaRA (see Limitations: no fused CUDA kernels are used).
+# - peft is needed only for the LoRA/DoRA/AdaLoRA baselines. Loading a PEFT
+#   adapter into the MaRA encoder (train_mara.py --base-lora-ckpt) requires
+#   peft>=0.18; the pinned 0.13.2 covers every result reported in the paper.

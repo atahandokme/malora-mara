@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# run artifacts
+outputs/
+logs/
+*.log
+nohup.out
+wandb/
+
+# checkpoints and caches (not released)
+*.pt
+*.bin
+*.safetensors
+.cache/
+
+.DS_Store

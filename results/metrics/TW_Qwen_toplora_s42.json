@@ -1,0 +1,45 @@
+{
+  "method": "diagonal_gated_toplora_hproj_diag",
+  "model": "Qwen/Qwen2.5-7B",
+  "dataset": "twowikimultihopqa",
+  "rank": 16,
+  "gate_type": "toplora",
+  "mode": "hproj",
+  "output_type": "diag",
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 41978048,
+  "total_params": 7657594560,
+  "trainable_pct": 0.5482,
+  "total_training_time_s": 20212.4,
+  "avg_time_per_step_s": 4.195,
+  "peak_gpu_memory_mb": 37961.0,
+  "best_val_loss": 3.051352555513382,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 1.8490554783266362,
+      "val_loss": 3.707222407579422,
+      "train_time_s": 9949.0,
+      "val_time_s": 133.4,
+      "time_per_step_s": 4.189,
+      "num_train_steps": 2375,
+      "peak_gpu_memory_mb": 37305.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 3.4110763293559616,
+      "val_loss": 3.051352555513382,
+      "train_time_s": 9978.3,
+      "val_time_s": 135.0,
+      "time_per_step_s": 4.201,
+      "num_train_steps": 2375,
+      "peak_gpu_memory_mb": 37961.0
+    }
+  ]
+}

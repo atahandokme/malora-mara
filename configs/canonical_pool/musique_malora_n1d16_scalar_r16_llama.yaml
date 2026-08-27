@@ -1,0 +1,52 @@
+dataset:
+  name: musique
+evaluation:
+  do_sample: false
+  max_new_tokens: 32
+  num_beams: 4
+  temperature: 0.0
+gated_lora:
+  alpha: 32
+  d_conv: 4
+  d_state: 16
+  direct_mode: false
+  dropout: 0.05
+  expand_factor: 2
+  gate_activation: softplus
+  gate_bottleneck: 32
+  gate_sharing: per_matrix
+  gate_type: mamba
+  hproj_mode: true
+  n_layers: 1
+  rank: 16
+  residual_outer: false
+  scalar_output: true
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - up_proj
+  - down_proj
+  zero_init_down: false
+hardware:
+  device: cuda
+  mixed_precision: true
+logging:
+  log_every_n_steps: 50
+  save_every_n_epochs: 1
+lora_pool_path: data/preprocessed_10k/musique_canonical_n10000.json
+model:
+  base_model: meta-llama/Llama-3.1-8B
+  torch_dtype: bfloat16
+output_root: outputs/canonical_pool_2026_05_09
+run_tag: n1d16_scalarFIXED
+training:
+  batch_size: 2
+  gradient_accumulation_steps: 2
+  learning_rate: 0.0002
+  max_grad_norm: 1.0
+  max_seq_length: 4096
+  max_train_samples: 10000
+  num_epochs: 2
+  warmup_steps: 100
+  weight_decay: 0.0

@@ -1,0 +1,45 @@
+{
+  "method": "diagonal_gated_mamba_hproj_scalar",
+  "model": "Qwen/Qwen2.5-7B",
+  "dataset": "musique",
+  "rank": 16,
+  "gate_type": "mamba",
+  "mode": "hproj",
+  "output_type": "scalar",
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 42450688,
+  "total_params": 7658067200,
+  "trainable_pct": 0.5543,
+  "total_training_time_s": 56573.6,
+  "avg_time_per_step_s": 5.883,
+  "peak_gpu_memory_mb": 37781.0,
+  "best_val_loss": 0.04992399475923594,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.20552798323332344,
+      "val_loss": 0.06785770075824257,
+      "train_time_s": 27929.1,
+      "val_time_s": 337.6,
+      "time_per_step_s": 5.88,
+      "num_train_steps": 4750,
+      "peak_gpu_memory_mb": 36770.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.019490932564038017,
+      "val_loss": 0.04992399475923594,
+      "train_time_s": 27963.6,
+      "val_time_s": 338.8,
+      "time_per_step_s": 5.887,
+      "num_train_steps": 4750,
+      "peak_gpu_memory_mb": 37781.0
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "method": "lora",
+  "model": "google/gemma-2-9b",
+  "dataset": "twowikimultihopqa",
+  "rank": 16,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 36814848,
+  "total_params": 9278520832,
+  "trainable_pct": 0.3968,
+  "total_training_time_s": 20354.7,
+  "avg_time_per_step_s": 1.054,
+  "peak_gpu_memory_mb": 28402.0,
+  "best_val_loss": 0.08770953605372399,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.1748779291220918,
+      "val_loss": 0.08770953605372399,
+      "train_time_s": 10042.2,
+      "val_time_s": 158.9,
+      "time_per_step_s": 1.057,
+      "num_train_steps": 9499,
+      "peak_gpu_memory_mb": 28035.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.06275121388720446,
+      "val_loss": 0.12911879592056694,
+      "train_time_s": 9992.7,
+      "val_time_s": 159.0,
+      "time_per_step_s": 1.052,
+      "num_train_steps": 9499,
+      "peak_gpu_memory_mb": 28402.0
+    }
+  ]
+}
